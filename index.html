@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="/js/main.js"></script>
+
+  <title>PromPart</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__top-bar ">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-1 top-bar__social d-flex justify-content-between">
+            <a href="#" class="social__link" >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.26 1.26C2.38419e-07 2.532 0 4.566 0 8.64V9.36C0 13.428 2.38419e-07 15.462 1.26 16.74C2.532 18 4.566 18 8.64 18H9.36C13.428 18 15.462 18 16.74 16.74C18 15.468 18 13.434 18 9.36V8.64C18 4.572 18 2.538 16.74 1.26C15.468 2.38419e-07 13.434 0 9.36 0H8.64C4.572 0 2.538 2.38419e-07 1.26 1.26ZM3.036 5.478H5.1C5.166 8.91 6.678 10.362 7.878 10.662V5.478H9.816V8.436C10.998 8.31 12.246 6.96 12.666 5.472H14.598C14.4404 6.24222 14.1256 6.97167 13.6735 7.61481C13.2213 8.25796 12.6414 8.80099 11.97 9.21C12.7194 9.58287 13.3813 10.1104 13.9118 10.7579C14.4424 11.4053 14.8297 12.1579 15.048 12.966H12.918C12.462 11.544 11.322 10.44 9.816 10.29V12.966H9.576C5.472 12.966 3.132 10.158 3.036 5.478Z" fill="#F9F9F9"/>
+              </svg>
+            </a>
+            <a href="#" class="social__link">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">Ы
+                <path d="M10.3,8.3H5.8V10h4.5c0.3,0,0.4,0,0.5-0.1C10.9,9.8,11,9.6,11,9.4V8.9c0-0.2-0.1-0.3-0.1-0.4
+                  C10.8,8.4,10.6,8.3,10.3,8.3z" fill="#F9F9F9"/>
+                <path d="M14,0H4C1.8,0,0,1.8,0,4v10c0,2.2,1.8,4,4,4h10c2.2,0,4-1.8,4-4V4C18,1.8,16.2,0,14,0z M11,13.8l-1.6-2.3H5.8
+                  v2.3H4v-7h6.6c0.4,0,0.7,0,1,0.1c0.3,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.3,0.4,0.4,0.6c0.1,0.2,0.1,0.6,0.1,1v0.5
+                  c0,0.7-0.1,1.2-0.4,1.5c-0.2,0.3-0.6,0.5-1.2,0.6l1.8,2.3H11z M13.8,6.8c-0.8,0-1.4-0.6-1.4-1.4S13,4,13.8,4c0.8,0,1.4,0.6,1.4,1.4
+                  S14.5,6.8,13.8,6.8z" fill="#F9F9F9"/>
+              </svg>
+            </a>
+            <a href="#" class="social__link">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 18.1 18.1" style="enable-background:new 0 0 18.1 18.1;" xml:space="preserve">
+                <path d="M16.2,1.8C14.8,0.4,12.7,0,9.1,0H9C5.4,0,3.3,0.4,1.9,1.8C0.3,3.3,0,5.4,0,9v0.1c0,3.6,0.3,5.7,1.9,7.2
+                  c1.5,1.4,3.6,1.8,7.2,1.8h0.1c3.6,0,5.7-0.4,7.2-1.8c1.5-1.5,1.9-3.6,1.9-7.2V9C18.1,5.4,17.7,3.3,16.2,1.8z M15.8,8.8V9
+                  c0,0.1-0.1,0.1-0.1,0.1c-2.5,0.1-4,0.4-5,1.5c-1.1,1.1-1.4,2.6-1.5,5c0,0.1-0.1,0.1-0.1,0.1H8.7c-0.1,0-0.1-0.1-0.1-0.1
+                  c-0.1-2.5-0.4-4-1.5-5c-1.1-1.1-2.6-1.4-5-1.5C2.1,9.2,2,9.1,2,9V8.8c0-0.1,0.1-0.1,0.1-0.1c2.5-0.1,4-0.4,5-1.5
+                  c1.1-1.1,1.4-2.6,1.5-5C8.6,2.1,8.7,2,8.7,2H9c0.1,0,0.1,0.1,0.1,0.1c0.1,2.5,0.4,4,1.5,5c1.1,1.1,2.6,1.4,5,1.5
+                  C15.7,8.6,15.8,8.7,15.8,8.8L15.8,8.8z" fill="#F9F9F9"/>
+              </svg>
+            </a>
+          </div>
+          <div class="col-1 top-bar__mess d-flex justify-content-end ">
+            <a href="#" class="mess__link" >
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.04762 0C4.05062 0 0 4.05062 0 9.04762C0 10.7576 0.475 12.359 1.30105 13.7234L0.494 16.4667C0.447662 16.6242 0.444613 16.7912 0.485173 16.9503C0.525734 17.1094 0.608405 17.2547 0.724497 17.3707C0.840588 17.4868 0.985812 17.5695 1.1449 17.6101C1.30399 17.6506 1.47107 17.6476 1.62857 17.6012L4.37181 16.7942C5.7821 17.6473 7.39936 18.0973 9.04762 18.0952C14.0446 18.0952 18.0952 14.0446 18.0952 9.04762C18.0952 4.05062 14.0446 0 9.04762 0ZM7.00105 11.0951C8.83138 12.9245 10.5785 13.1661 11.1955 13.1887C12.1338 13.2231 13.0476 12.5065 13.4031 11.675C13.4477 11.5715 13.4637 11.458 13.4497 11.3462C13.4357 11.2344 13.3922 11.1284 13.3235 11.039C12.8277 10.4057 12.1573 9.95057 11.5022 9.49819C11.3655 9.4034 11.1974 9.36533 11.0332 9.392C10.869 9.41866 10.7216 9.50797 10.6219 9.64114L10.079 10.469C10.0504 10.5133 10.0059 10.5451 9.95465 10.5579C9.90341 10.5706 9.84923 10.5635 9.80309 10.5378C9.43486 10.327 8.89833 9.96867 8.51291 9.58324C8.12748 9.19781 7.7909 8.68571 7.60181 8.341C7.57893 8.29708 7.57247 8.24644 7.58358 8.19818C7.59469 8.14992 7.62265 8.10721 7.66243 8.07771L8.49843 7.45705C8.61808 7.35354 8.69533 7.20951 8.71536 7.05257C8.7354 6.89563 8.69681 6.73682 8.607 6.60657C8.20167 6.01305 7.72938 5.25848 7.04448 4.75814C6.9559 4.6945 6.85238 4.65481 6.74396 4.64292C6.63554 4.63104 6.52588 4.64735 6.42562 4.69029C5.59324 5.04676 4.87305 5.96057 4.90743 6.90062C4.93005 7.51767 5.17162 9.26476 7.00105 11.0951Z" fill="#F9F9F9"/>
+              </svg>
+            </a>
+            <a href="#" class="mess__link" >
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.09521 0C4.12721 0 0.0952148 4.032 0.0952148 9C0.0952148 13.968 4.12721 18 9.09521 18C14.0632 18 18.0952 13.968 18.0952 9C18.0952 4.032 14.0632 0 9.09521 0ZM13.2712 6.12C13.1362 7.542 12.5512 10.998 12.2542 12.591C12.1282 13.266 11.8762 13.491 11.6422 13.518C11.1202 13.563 10.7242 13.176 10.2202 12.843C9.42822 12.321 8.97822 11.997 8.21321 11.493C7.32222 10.908 7.89821 10.584 8.41121 10.062C8.54621 9.927 10.8502 7.83 10.8952 7.641C10.9015 7.61237 10.9006 7.58265 10.8928 7.55442C10.8849 7.52619 10.8703 7.5003 10.8502 7.479C10.7962 7.434 10.7242 7.452 10.6612 7.461C10.5802 7.479 9.32022 8.316 6.86321 9.972C6.50322 10.215 6.17921 10.341 5.89121 10.332C5.56721 10.323 4.95521 10.152 4.49621 9.999C3.92921 9.819 3.48821 9.72 3.52421 9.405C3.54221 9.243 3.76722 9.081 4.19022 8.91C6.81821 7.767 8.56421 7.011 9.43721 6.651C11.9392 5.607 12.4522 5.427 12.7942 5.427C12.8662 5.427 13.0372 5.445 13.1452 5.535C13.2352 5.607 13.2622 5.706 13.2712 5.778C13.2622 5.832 13.2802 5.994 13.2712 6.12Z" fill="#F9F9F9"/>
+              </svg>
+            </a>
+          </div>
+          <div class="col-3 top-bar__free-call d-flex">Бесплатный звонок по РФ <a href="tel:88004444165" class="header__tel">8 (800) 4444-165</a></div>
+          <div class="col-3 d-flex justify-content-end">пн-пт, с 09:00 до 18:00 по МСК</div>
+          <div class="col-2 top-bar__email d-flex justify-content-end align-items-center">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.1 9C0.7975 9 0.538633 8.88994 0.3234 8.66981C0.108167 8.44969 0.000366667 8.18475 0 7.875V1.125C0 0.815625 0.1078 0.550875 0.3234 0.33075C0.539 0.110625 0.797867 0.000375 1.1 0H9.9C10.2025 0 10.4615 0.11025 10.6771 0.33075C10.8927 0.55125 11.0004 0.816 11 1.125V7.875C11 8.18437 10.8924 8.44931 10.6771 8.66981C10.4619 8.89031 10.2029 9.00037 9.9 9H1.1ZM5.5 5.0625L9.9 2.25V1.125L5.5 3.9375L1.1 1.125V2.25L5.5 5.0625Z" fill="#F9F9F9"/>
+            </svg>
+            <a href="email:sales@prompart.com">
+              sales@prompart.com
+            </a>
+          </div>
+          <div class="col-2 top-bar__country-phone d-flex justify-content-end ">
+            <div class="dropdown">
+              <a class="dropdown__link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Россия
+              </a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Россия</a></li>
+                <li><a class="dropdown-item" href="#">Казахстан</a></li>
+              </ul> -->
+            </div>
+            <a class="country-phone__number" href="tel:88127704708">8 (812) 770-47-08</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <a href="#" class="logo header__logo">
+              <img src="/img/logo.png" alt="Логотип">
+            </a>
+          </div>
+          <div class="col-8 d-flex align-items-center">
+            <nav class="nav">
+              <ul class="nav__list list-reset header__nav d-flex ">
+                <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Покупателю</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-2 d-flex align-items-center">
+            <button class="btn-reset header__btn">
+              Срочный заказ
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <button class="btn-reset header__catalog-btn ">
+              Каталог
+            </button>
+          </div>
+          <div class="col-8">
+            <form class="header__search-form" action="/search" method="GET">
+              <input type="text" name="query" class="header__search-input" placeholder="Поиск инструмента...">
+            </form>
+          </div>
+          <div class="col-2 header__user-actions d-flex justify-content-between">
+            <a href="#" class="user-actions__item user-actions__favorites">
+              Избранное
+            </a>
+            <a href="#" class="user-actions__item user-actions__cart">
+              Корзина
+            </a>
+            <a href="#" class="user-actions__item user-actions__profile">
+              Профиль
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <section class="section banner">
+      <div class="container banner__container banner_swiper swiper">
+        <div class="row banner-slider d-flex flex-nowrap swiper-wrapper">
+          <div class="col-9 swiper-slide">
+            <a href="" class="banner__item" draggable="false" style="background-image: url(/img/bg-slide1.png);">
+              <p class="banner_title">Скидка 3%</p>
+              <div class="banner_descr">при заказе<br>через сайт</div>
+            </a>
+
+          </div>
+          <div class="col-9 swiper-slide">
+            <a href="" class="banner__item" draggable="false" style="background-image: url(/img/bg-slide2.png);">
+              <p class="banner_title">Бесплатная доставка</p>
+              <div class="banner_descr">при заказе от 100&thinsp;000₽</div>
+            </a>
+          </div>
+          <div class="col-9 swiper-slide">
+            <a href="" class="banner__item" draggable="false" style="background-image: url(/img/bg-slide1.png);">
+              <p class="banner_title">Скидка 10%</p>
+              <div class="banner_descr">при заказе<br>через сайт</div>
+            </a>
+
+          </div>
+
+        </div>
+       </div>
+    </section>
+    <section class="section ctg-sections">
+      <div class="container">
+        <div class="row ctg-sections__block">
+          <div class="col-6 ">
+            <div class="ctg-sections__item" id="ctg-sections-1" style="background-image: url(/img/gibochnyj-instrument.png);">
+              <h3 class="ctg-section__title">гибочный инструмент</h3>
+                <ul class="ctg-sections__list list-reset">
+                  <div class="ctg-sections__group">
+                    <li class="ctg-sections__list-item"><a href="#">Amada Promecam®</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Wila®</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Trumpf®</a></li>
+                  </div>
+                  <div class="ctg-sections__group">
+                    <li class="ctg-sections__list-item"><a href="#">Матрицы</a>
+                      <ul class="ctg-sections__sublist list-reset">
+                        <li class="ctg-sections__sublist-item"><a href="#">Матрицы Wing Bend</a></li>
+                        <li class="ctg-sections__sublist-item"><a href="#">Многоручьевые матрицы</a></li>
+                      </ul>
+                    </li>
+                    <li class="ctg-sections__list-item"><a href="#">Пуансоны</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Адаптеры и подложки</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Специальный инструмент</a></li>
+                  </div>
+                  <div class="ctg-sections__group">
+                    <li class="ctg-sections__list-item"><a href="#">Радиусная гибка</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Z-гибка</a></li>
+                    <li class="ctg-sections__list-item"><a href="#">Гибка без следов</a></li>
+                  </div>
+                </ul>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="ctg-sections__item" id="ctg-sections-2" style="background-image: url(/img/rashodniki-dlya-lazernoj-rezki.png);">
+              <h3 class="ctg-section__title">Расходники для лазерной резки</h3>
+              <ul class="ctg-sections__list list-reset">
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Amada®</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Precitec®</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Raytools®</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Trumpf® </a></li>
+                </div>
+                <div class="ctg-sections__group">
+                <li class="ctg-sections__list-item"><a href="#">Сопла</a>
+                  <ul class="ctg-sections__sublist list-reset">
+                    <li class="ctg-sections__sublist-item"><a href="#">Шестигранные</a></li>
+                    <li class="ctg-sections__sublist-item"><a href="#">Цилиндрические   </a></li>
+                    <li class="ctg-sections__sublist-item"><a href="#">Конусные</a></li>
+                    <li class="ctg-sections__sublist-item"><a href="#">Сомбреро</a></li>
+                    <li class="ctg-sections__sublist-item"><a href="#">Пуансоны</a></li>
+                  </ul>
+                </li>
+                </div>
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Защитные стекла</a></li>
+                </div>
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Керамические проставки</a></li>
+                </div>
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Лазерные режущие головы</a></li>
+                </div>
+              </ul>
+
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="ctg-sections__item">
+              <h3 class="ctg-section__title">гибочные станки</h3>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="ctg-sections__item">
+              <h3 class="ctg-section__title">лазерные станки</h3>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="ctg-sections__item" id="ctg-sections-5" style="background-image: url(/img/koordinatno-proobivnoj-instrument.png);">
+              <h3 class="ctg-section__title">координатно-прообивной инструмент</h3>
+              <ul class="ctg-sections__list list-reset">
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">MultiTool</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Murata®</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Salvagnini®</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Trumpf®</a></li>
+                </div>
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Формовочный инстремент</a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="ctg-sections__item" id="ctg-sections-6" style="background-image: url(/img/instrumenty-dlya-mehanicheskoj-obrabotki.png);">
+              <h3 class="ctg-section__title">инструменты для механической обработки</h3>
+              <ul class="ctg-sections__list list-reset">
+                <div class="ctg-sections__group">
+                  <li class="ctg-sections__list-item"><a href="#">Нарезание и накатывание резьбы</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Обработка отверстий</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Токарная обработка</a></li>
+                  <li class="ctg-sections__list-item"><a href="#">Фрезерование </a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section tools">
+      <div class="container">
+        <div class="row align-items-center mb-42px">
+          <div class="col-10">
+            <h2 class="section-title">Инструмент и оснастка</h2>
+          </div>
+          <div class="col-2 d-flex justify-content-end">
+            <a href="" class="all-product-link">Все товары</a>
+          </div>
+        </div>
+        <div class="row product__cards-list">
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-1.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5 еще дополнительный текст в описании для демонстрации</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-2.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5 еще дополнительный текст в описании для демонстрации</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn active-favorite">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-3.png" alt="" class="product__preview-image">
+                </div>
+
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                  <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-4.png" alt="" class="product__preview-image">
+                </div>
+
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-1.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-2.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-3.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product__card">
+              <a href="#" class="product_link">
+                <div class="d-flex justify-content-center">
+                  <img src="/img/product-4.png" alt="" class="product__preview-image">
+                </div>
+                <div class="product__info">
+                  <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="product__price">12 789 ₽</p>
+                    <button class="btn-reset product__btn">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="product__favorite-btn active-favorite">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section manufacturers">
+      <div class="container">
+        <div class="row mb-42px">
+          <div class="col-12">
+            <h2 class="section-title">Производители станков и системы креплений </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper manufacturers__swiper">
+              <div class="swiper-wrapper manufacturers__list">
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/mada.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/trumpf.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/raytools.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/precitec.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/wila.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/raytools.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/precitec.png" alt=""></div>
+                <div class="swiper-slide manufacturers__item"><img class="manufacturers__image" src="/img/wila.png" alt=""></div>
+              </div>
+
+            </div>
+              <div class="swiper-button-prev manufacturers__swiper-button-prev"></div>
+              <div class="swiper-button-next manufacturers__swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section popular">
+      <div class="container">
+        <div class="row align-items-center  mb-42px">
+          <div class="col-10">
+            <h2 class="section-title">Популярные товары AMADA Promecam</h2>
+          </div>
+          <div class="col-2 d-flex justify-content-end">
+            <a href="" class="all-product-link">Все товары</a>
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+          <div class="row products-slider">
+            <div class="col swiper product__swiper">
+              <div class="row swiper-wrapper product__swiper-wrapper flex-nowrap">
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-1.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-2.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-3.png" alt="" class="product__preview-image">
+                      </div>
+
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-4.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-1.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev product__swiper-button-prev"></div>
+            <div class="swiper-button-next product__swiper-button-next"></div>
+            <div class="swiper-scrollbar product__swiper-scrollbar"></div>
+          </div>
+      </div>
+
+    </section>
+    <section class="section popular">
+      <div class="container">
+        <div class="row mb-42px align-items-center">
+          <div class="col-10">
+            <h2 class="section-title">Популярные товары TRUMPF</h2>
+          </div>
+          <div class="col-2 d-flex justify-content-end">
+            <a href="" class="all-product-link">Все товары</a>
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+          <div class="row products-slider">
+            <div class="col swiper product__swiper">
+              <div class="row swiper-wrapper product__swiper-wrapper flex-nowrap">
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-1.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-2.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-3.png" alt="" class="product__preview-image">
+                      </div>
+
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-4.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-1.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-1.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 swiper-slide product__item">
+                  <div class="product__card">
+                    <a href="#" class="product_link">
+                      <div class="d-flex justify-content-center">
+                        <img src="/img/product-2.png" alt="" class="product__preview-image">
+                      </div>
+                      <div class="product__info">
+                        <p class="product__name tooltiptext">Пуансон AP 1055 30° H105 R0,5</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="product__price">12 789 ₽</p>
+                          <button class="btn-reset product__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11611 11.2308H18.0732C18.2445 11.2331 18.411 11.1739 18.5424 11.0639C18.6738 10.954 18.7615 10.8006 18.7894 10.6315L19.9881 4.78538C20.0073 4.68025 20.0032 4.57217 19.9762 4.46877C19.9491 4.36538 19.8997 4.26917 19.8314 4.18695C19.7631 4.10473 19.6776 4.03849 19.5809 3.99289C19.4842 3.9473 19.3787 3.92347 19.2718 3.92308H4.65436M6.11611 11.2308L4.65436 3.92308M6.11611 11.2308L6.73004 14.3C6.76374 14.4651 6.85344 14.6134 6.98396 14.7199C7.11448 14.8265 7.27781 14.8846 7.44629 14.8846H16.3483M4.65436 3.92308L4.04043 1.58462C4.00673 1.41955 3.91703 1.2712 3.78651 1.16467C3.65599 1.05814 3.49266 0.999966 3.32417 1H1M15.6174 20C15.4236 20 15.2377 19.923 15.1006 19.786C14.9636 19.6489 14.8866 19.463 14.8866 19.2692C14.8866 19.0754 14.9636 18.8895 15.1006 18.7525C15.2377 18.6155 15.4236 18.5385 15.6174 18.5385C15.8113 18.5385 15.9972 18.6155 16.1343 18.7525C16.2713 18.8895 16.3483 19.0754 16.3483 19.2692C16.3483 19.463 16.2713 19.6489 16.1343 19.786C15.9972 19.923 15.8113 20 15.6174 20ZM8.30872 20C8.11488 20 7.92898 19.923 7.79192 19.786C7.65485 19.6489 7.57785 19.463 7.57785 19.2692C7.57785 19.0754 7.65485 18.8895 7.79192 18.7525C7.92898 18.6155 8.11488 18.5385 8.30872 18.5385C8.50256 18.5385 8.68846 18.6155 8.82553 18.7525C8.96259 18.8895 9.03959 19.0754 9.03959 19.2692C9.03959 19.463 8.96259 19.6489 8.82553 19.786C8.68846 19.923 8.50256 20 8.30872 20Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="product__favorite-btn">
+                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.4172 10.8252L12.1101 17.3271C11.6919 17.758 11.1249 18 10.5336 18C9.94234 18 9.37527 17.758 8.95712 17.3271L2.65005 10.8264C2.12869 10.2937 1.71453 9.66008 1.43137 8.96197C1.14821 8.26386 1.00162 7.51498 1.00001 6.75833C0.998406 6.00167 1.14181 5.25214 1.42201 4.55276C1.7022 3.85338 2.11365 3.21793 2.63275 2.68289C3.15185 2.14785 3.76837 1.72376 4.44691 1.43496C5.12546 1.14617 5.85266 0.998357 6.58677 1.00001C7.32089 1.00167 8.04746 1.15276 8.72477 1.44462C9.40208 1.73648 10.0168 2.16334 10.5336 2.70072C11.5834 1.64566 12.9942 1.05935 14.4604 1.06882C15.9266 1.07829 17.3301 1.68277 18.367 2.75131C19.4038 3.81985 19.9905 5.26642 19.9999 6.77764C20.0093 8.28886 19.4406 9.74306 18.4172 10.8252Z" stroke="#3475C9" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev product__swiper-button-prev"></div>
+            <div class="swiper-button-next product__swiper-button-next"></div>
+            <div class="swiper-scrollbar product__swiper-scrollbar"></div>
+          </div>
+      </div>
+    </section>
+    <section class="section about">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">О компании</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section representatives">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Официальные представители</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section certificates">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Сертификаты</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section production">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Производство</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section client">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Нам доверяют</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section advantages">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Наши преимущества</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section stocks">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Акции</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section discounts">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Скидки %</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section compilation">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Подобрали для вас</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section news">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">Новости</h2>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="section form">
+    </section>
+    <span class="tooltip"></span>
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+</body>
+</html>
